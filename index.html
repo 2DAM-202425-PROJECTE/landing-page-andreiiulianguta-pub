@@ -20,23 +20,24 @@
     }
 
     header {
-        background: linear-gradient(90deg, #007bff, #0056b3);
+        background: #4a90e2;
         color: #fff;
-        padding: 20px 0;
+        padding: 40px 0;
         text-align: center;
     }
 
     header h1 {
-        font-size: 3em;
+        font-size: 3.5em;
+        margin-bottom: 10px;
     }
 
     header p {
-        font-size: 1.2em;
+        font-size: 1.5em;
+        margin-bottom: 20px;
     }
 
     nav {
-        background: #0056b3;
-        padding: 10px 0;
+        margin-top: 20px;
     }
 
     nav ul {
@@ -46,7 +47,7 @@
     }
 
     nav ul li {
-        margin: 0 20px;
+        margin: 0 15px;
     }
 
     nav a {
@@ -57,7 +58,7 @@
     }
 
     nav a:hover {
-        color: #cce5ff;
+        color: #ffcc00;
     }
 
     .container {
@@ -68,17 +69,21 @@
     }
 
     section {
-        margin: 40px 0;
+        margin: 60px 0;
+        padding: 20px;
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
     h2 {
-        font-size: 2em;
-        color: #007bff;
+        font-size: 2.5em;
+        color: #4a90e2;
         margin-bottom: 20px;
     }
 
     .intro p {
-        font-size: 1.2em;
+        font-size: 1.3em;
         line-height: 1.6em;
     }
 
@@ -87,7 +92,7 @@
         font-size: 1.2em;
         color: #fff;
         background: #28a745;
-        padding: 10px 20px;
+        padding: 15px 30px;
         text-decoration: none;
         border-radius: 5px;
         transition: background 0.3s;
@@ -104,18 +109,24 @@
     }
 
     .service {
-        background: #fff;
+        background: #f9f9f9;
         border: 1px solid #ddd;
         border-radius: 5px;
         padding: 20px;
         margin: 10px;
         flex: 1 1 30%;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s;
+    }
+
+    .service:hover {
+        transform: translateY(-5px);
     }
 
     .testimonials {
         text-align: center;
         font-style: italic;
+        margin: 40px 0;
     }
 
     .contact-cta {
@@ -202,6 +213,7 @@
 
 <footer>
   <div class="socials">
+    <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
     <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
     <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
     <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
