@@ -3,199 +3,210 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Andrei Dev - Soluciones Digitales</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <meta name="description" content="Landing Page de Andrei Iulian Guta - Desarrollador de Aplicaciones Multiplataforma">
+  <title>Andrei Iulian Guta - Desarrollador de Aplicaciones Multiplataforma</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
-    body {
-      font-family: 'Roboto', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f4f4f4;
-      color: #333;
-      scroll-behavior: smooth; /* Habilitar desplazamiento suave */
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
     }
 
-    /* Estilos del header */
+    body {
+        font-family: 'Arial', sans-serif;
+        background-color: #f4f4f4;
+        color: #333;
+    }
+
     header {
-      background: url('/home/alumne/Imatges/DALL·E 2024-10-01 15.38.34 - A sleek and modern tech-themed background with abstract shapes and a digital grid, representing web development and technology. The color palette shou.webp') no-repeat center center/cover;
-      height: 100vh;
-      color: white;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
+        background: linear-gradient(90deg, #007bff, #0056b3);
+        color: #fff;
+        padding: 20px 0;
+        text-align: center;
     }
 
     header h1 {
-      font-size: 3.5em;
-      margin: 0;
+        font-size: 3em;
     }
 
     header p {
-      font-size: 1.2em;
-      margin: 20px 0;
+        font-size: 1.2em;
     }
 
-    .cta-button {
-      padding: 15px 30px;
-      background-color: #007BFF;
-      color: white;
-      font-size: 1.2em;
-      text-decoration: none;
-      border-radius: 5px;
-      transition: background-color 0.3s ease;
+    nav {
+        background: #0056b3;
+        padding: 10px 0;
     }
 
-    .cta-button:hover {
-      background-color: #0056b3;
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
     }
 
-    /* Sección de sobre mi */
-    .about {
-      padding: 50px 20px;
-      text-align: center;
-      background-color: #fff;
+    nav ul li {
+        margin: 0 20px;
     }
 
-    .about img {
-      max-width: 150px;
-      border-radius: 50%;
-      margin-bottom: 20px;
+    nav a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 1.1em;
+        transition: color 0.3s;
     }
 
-    .about h2 {
-      color: #007BFF;
+    nav a:hover {
+        color: #cce5ff;
     }
 
-    .logo-container {
-      text-align: center;
-      margin: 20px;
+    .container {
+        width: 90%;
+        max-width: 1200px;
+        margin: auto;
+        padding: 20px;
     }
 
-    .logo-container img {
-      width: 200px;
+    section {
+        margin: 40px 0;
     }
 
-    .skills {
-      padding: 50px 20px;
-      background-color: #f9f9f9;
+    h2 {
+        font-size: 2em;
+        color: #007bff;
+        margin-bottom: 20px;
     }
 
-    .skills h2 {
-      text-align: center;
-      color: #007BFF;
-      margin-bottom: 40px;
+    .intro p {
+        font-size: 1.2em;
+        line-height: 1.6em;
     }
 
-    .skills ul {
-      list-style: none;
-      padding: 0;
-      max-width: 800px;
-      margin: 0 auto;
+    .btn {
+        display: inline-block;
+        font-size: 1.2em;
+        color: #fff;
+        background: #28a745;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background 0.3s;
     }
 
-    .skills li {
-      background: #fff;
-      padding: 20px;
-      margin-bottom: 10px;
-      border-radius: 5px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    .btn:hover {
+        background: #218838;
     }
 
-    /* Sección de contacto */
-    .contact {
-      padding: 50px 20px;
-      background-color: #007BFF;
-      color: white;
-      text-align: center;
+    .services {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
     }
 
-    .contact h2 {
-      margin-bottom: 20px;
+    .service {
+        background: #fff;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        padding: 20px;
+        margin: 10px;
+        flex: 1 1 30%;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
 
-    .contact form {
-      max-width: 600px;
-      margin: 0 auto;
+    .testimonials {
+        text-align: center;
+        font-style: italic;
     }
 
-    .contact form input,
-    .contact form textarea {
-      width: 100%;
-      padding: 15px;
-      margin: 10px 0;
-      border-radius: 5px;
-      border: none;
+    .contact-cta {
+        text-align: center;
     }
 
-    .contact form input[type="submit"] {
-      background-color: white;
-      color: #007BFF;
-      font-size: 1.1em;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-
-    .contact form input[type="submit"]:hover {
-      background-color: #f4f4f4;
-    }
-
-    /* Footer */
     footer {
-      background-color: #007BFF;
-      color: white;
-      text-align: center;
-      padding: 20px;
+        background: #333;
+        color: #fff;
+        text-align: center;
+        padding: 20px 0;
+        position: relative;
+        bottom: 0;
+        width: 100%;
     }
 
-    footer p {
-      margin: 0;
+    .socials {
+        margin: 20px 0;
+    }
+
+    .socials a {
+        margin: 0 10px;
+        color: #fff;
+        text-decoration: none;
+        font-size: 1.5em;
     }
   </style>
 </head>
 <body>
-
 <header>
-  <h1>Bienvenido a Andrei Dev</h1>
-  <p>Soluciones tecnológicas para tus necesidades digitales.</p>
-  <a href="#contact" class="cta-button">Contáctame</a>
+  <h1>Andrei Iulian Guta</h1>
+  <p>Desarrollador de Aplicaciones Multiplataforma</p>
+  <nav>
+    <ul>
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#sobre-mi">Sobre mí</a></li>
+      <li><a href="#proyectos">Proyectos</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </nav>
 </header>
 
-<div class="logo-container">
-  <img src="data:image/png;base64,/home/alumne/Imatges/logo.webp" alt="Andrei Dev Logo">
+<div class="container">
+  <section id="inicio" class="intro">
+    <h2>Bienvenido a mi página</h2>
+    <p>Soy un apasionado desarrollador con experiencia en la creación de aplicaciones multiplataforma. Mi objetivo es transformar ideas en soluciones efectivas utilizando tecnología moderna.</p>
+    <a href="#proyectos" class="btn">Ver Proyectos</a>
+  </section>
+
+  <section id="sobre-mi">
+    <h2>Sobre mí</h2>
+    <p>Con más de X años de experiencia en desarrollo de software, me especializo en crear soluciones que resuelven problemas reales. Estoy familiarizado con las tecnologías más actuales y tengo una pasión por aprender continuamente.</p>
+  </section>
+
+  <section id="proyectos" class="services">
+    <h2>Servicios</h2>
+    <div class="service">
+      <h3>Desarrollo Web</h3>
+      <p>Creación de aplicaciones web interactivas y responsivas utilizando las últimas tecnologías.</p>
+    </div>
+    <div class="service">
+      <h3>Desarrollo Móvil</h3>
+      <p>Aplicaciones para Android e iOS utilizando frameworks como Flutter y React Native.</p>
+    </div>
+    <div class="service">
+      <h3>Consultoría</h3>
+      <p>Asesoramiento en proyectos tecnológicos y estrategias de desarrollo de software.</p>
+    </div>
+  </section>
+
+  <section class="testimonials">
+    <h2>Lo que dicen mis clientes</h2>
+    <blockquote>
+      "Andrei es un desarrollador excepcional. Transformó nuestra idea en una aplicación funcional en tiempo récord." - Cliente Satisfecho
+    </blockquote>
+  </section>
+
+  <section id="contacto" class="contact-cta">
+    <h2>¿Listo para empezar tu proyecto?</h2>
+    <p>Ponte en contacto conmigo y hagamos que tu visión se haga realidad.</p>
+    <a href="mailto:tuemail@ejemplo.com" class="btn">Contáctame</a>
+  </section>
 </div>
 
-<section class="about">
-  <img src="/home/alumne/Imatges/DALL·E 2024-10-01 15.40.45 - A professional and clean headshot or avatar of a young male web developer with short brown hair and wearing casual tech attire. The background should .webp" alt="Andrei Dev Foto">
-  <h2>Sobre Mí</h2>
-  <p>Soy Andrei, un desarrollador web especializado en crear soluciones digitales a medida. Con experiencia en tecnologías frontend y backend, mi enfoque está en proporcionar experiencias intuitivas y optimizadas para el usuario.</p>
-</section>
-
-<section class="skills">
-  <h2>Habilidades</h2>
-  <ul>
-    <li>Desarrollo web (HTML, CSS, JavaScript)</li>
-    <li>Frameworks (React, Angular)</li>
-    <li>Desarrollo Backend (Node.js, Express)</li>
-    <li>Base de datos (MongoDB, SQL)</li>
-  </ul>
-</section>
-
-<!-- Sección de Contacto -->
-<section id="contact" class="contact">
-  <h2>Contáctame</h2>
-  <form action="mailto:andreiiulianguta@iesebre.com" method="post" enctype="text/plain">
-    <input type="text" name="name" placeholder="Tu Nombre" required>
-    <input type="email" name="email" placeholder="Tu Correo Electrónico" required>
-    <textarea name="message" placeholder="Escribe tu mensaje aquí" rows="6" required></textarea>
-    <input type="submit" value="Enviar">
-  </form>
-</section>
-
 <footer>
-  <p>© 2024 Andrei Dev - Todos los derechos reservados</p>
+  <div class="socials">
+    <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+    <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+    <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+  </div>
+  <p>&copy; 2024 Andrei Iulian Guta. Todos los derechos reservados.</p>
 </footer>
-
 </body>
 </html>
