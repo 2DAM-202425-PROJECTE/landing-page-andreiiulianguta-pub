@@ -37,7 +37,7 @@
             margin: 10px;
             text-align: center;
             width: 300px; /* Ancho fijo para los recuadros */
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
 
         .pricing-table div h4 {
@@ -68,13 +68,20 @@
             }
         }
 
-        /* Estilos para el formulario de pago */
-        .payment-form {
-            margin-top: 30px;
+        /* Estilo para centrar la sección de ubicación */
+        .map-container {
+            text-align: center;
+            margin-top: 20px;
         }
 
-        .payment-form h2 {
-            margin-bottom: 20px;
+        .map-container iframe {
+            max-width: 100%; /* Asegura que el mapa no exceda el ancho del contenedor */
+            height: 450px; /* Altura fija para el iframe del mapa */
+        }
+
+        .location-text {
+            text-align: center;
+            margin-bottom: 20px; /* Espacio entre el texto y el mapa */
         }
     </style>
 </head>
@@ -102,7 +109,7 @@
                     <a href="#services">Servicios</a>
                 </li>
                 <li>
-                    <a href="#prices" onclick="showPaymentForm()">Precios</a> <!-- Enlace a la sección de precios -->
+                    <a href="#prices">Precios</a> <!-- Enlace a la sección de precios -->
                 </li>
                 <li>
                     <a href="#contact">Contacto</a>
@@ -120,7 +127,7 @@
             <div class="col-lg-12">
                 <div class="intro-message">
                     <h1>Andrei DEV</h1>
-                    <h3>Soluciones profesionales y Servicios Técnicos y Programación</h3>
+                    <h3>Soluciones profesionales , Servicios Técnicos y Programación</h3>
                     <hr class="intro-divider">
                     <ul class="list-inline intro-social-buttons">
                         <li>
@@ -181,7 +188,7 @@
             <div class="col-lg-12">
                 <hr class="section-heading-spacer">
                 <div class="clearfix"></div>
-                <h2 class="section-heading">Precios de Servicios</h2>
+                <h2 class="section-heading text-center">Precios de Servicios</h2>
                 <div class="pricing-table">
                     <div>
                         <h4>Desarrollo de Software</h4>
@@ -216,47 +223,23 @@
     </div>
 </div>
 
-                <!-- Formulario de Pago -->
-                <div class="payment-form" id="paymentForm" style="display:none;">
-                    <h2>Formulario de Pago</h2>
-                    <form>
-                        <div class="form-group">
-                            <label for="serviceName">Servicio:</label>
-                            <input type="text" class="form-control" id="serviceName" readonly>
-                        </div>
-                        <div class="form-group">
-                            <label for="price">Precio:</label>
-                            <input type="text" class="form-control" id="price" readonly>
-                        </div>
-                        <div class="form-group">
-                            <label for="name">Nombre Completo:</label>
-                            <input type="text" class="form-control" id="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email:</label>
-                            <input type="email" class="form-control" id="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="cardNumber">Número de Tarjeta:</label>
-                            <input type="text" class="form-control" id="cardNumber" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="expiryDate">Fecha de Expiración (MM/AA):</label>
-                            <input type="text" class="form-control" id="expiryDate" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="cvv">CVV:</label>
-                            <input type="text" class="form-control" id="cvv" required>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Realizar Pago</button>
-                    </form>
+<!-- Ubicación -->
+<a name="about"></a>
+<div class="content-section-a">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 map-container">
+                <div class="location-text">
+                    <h2>Ubicación</h2>
+                    <p>Encuentra mis servicios en la siguiente ubicación:</p>
                 </div>
-            </div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30213.543719541136!2d0.26157031618021076!3d40.637335419891926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a08aa1b6e12dfb%3A0xdb4a4f9e56937c2e!2s43560%20La%20S%C3%A9nia%2C%20Tarragona!5e1!3m2!1ses!2ses!4v1728579780182!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>            </div>
         </div>
     </div>
 </div>
+</div>
 
-<!-- Sección de Contacto -->
+<!-- Contacto -->
 <a name="contact"></a>
 <div class="content-section-b">
     <div class="container">
@@ -265,21 +248,21 @@
                 <hr class="section-heading-spacer">
                 <div class="clearfix"></div>
                 <h2 class="section-heading">Contacto</h2>
-                <p class="lead">Puedes contactarme a través del siguiente formulario:</p>
-                <form>
+                <p class="lead">Para más información, por favor envíame un mensaje a través de este formulario:</p>
+                <form action="#" method="POST">
                     <div class="form-group">
-                        <label for="nameContact">Nombre:</label>
-                        <input type="text" class="form-control" id="nameContact" required>
+                        <label for="name">Nombre:</label>
+                        <input type="text" class="form-control" id="name" name="name" required>
                     </div>
                     <div class="form-group">
-                        <label for="emailContact">Email:</label>
-                        <input type="email" class="form-control" id="emailContact" required>
+                        <label for="email">Email:</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
                     </div>
                     <div class="form-group">
                         <label for="message">Mensaje:</label>
-                        <textarea class="form-control" id="message" rows="5" required></textarea>
+                        <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary">Enviar</button>
+                    <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
                 </form>
             </div>
         </div>
@@ -288,12 +271,8 @@
 
 <!-- Footer -->
 <footer>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                <p>Copyright &copy; Andrei DEV 2024</p>
-            </div>
-        </div>
+    <div class="container text-center">
+        <p>&copy; 2024 Andrei DEV. Todos los derechos reservados.</p>
     </div>
 </footer>
 
@@ -303,14 +282,5 @@
 <!-- Bootstrap Core JavaScript -->
 <script src="js/bootstrap.min.js"></script>
 
-<script>
-    function showPaymentForm(service, price) {
-        document.getElementById('serviceName').value = service;
-        document.getElementById('price').value = price + '€';
-        document.getElementById('paymentForm').style.display = 'block';
-    }
-</script>
-
 </body>
-
 </html>
