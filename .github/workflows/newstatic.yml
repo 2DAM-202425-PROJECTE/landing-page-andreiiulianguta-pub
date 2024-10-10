@@ -4,7 +4,7 @@ name: Deploy static content to Pages
 on:
   # Runs on pushes targeting the default branch
   push:
-    branches: ["master"]
+    branches: ["production"]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -31,32 +31,22 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
-      # Set up Node.js
-      - name: Set Up Node
+      - name: set up Node
         uses: actions/setup-node@v3
         with:
-          node-version: 20.6.1
+          node-version: 22.9.0
           cache: 'npm'
-
-      # Install dependencies
       - name: Install dependencies
         run: npm install
-
-      # Build the project
       - name: Build
         run: npm run build
-
       - name: Setup Pages
         uses: actions/configure-pages@v5
-
-      # Upload artifact
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Upload dist directory
-          path: './dist'  # Asegúrate de que este es el directorio correcto de salida
-
+          # Upload entire repository
+          path: './dist'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
