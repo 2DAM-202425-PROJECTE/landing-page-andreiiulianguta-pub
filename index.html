@@ -2,14 +2,13 @@
 <html lang="en">
 
 <head>
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="Andrei">
 
-    <title>Servicios Técnicos y Programación - Andrei</title>
+    <title>Andrei DEV</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -21,6 +20,63 @@
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
 
+    <style>
+        /* Nuevos estilos para la sección de precios */
+        .pricing-table {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .pricing-table div {
+            background-color: #ffffff;
+            border: 1px solid #e7e7e7;
+            border-radius: 5px;
+            padding: 20px;
+            margin: 10px;
+            text-align: center;
+            width: 300px; /* Ancho fijo para los recuadros */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .pricing-table div h4 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .pricing-table div p {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            color: #666;
+        }
+
+        .pricing-table div strong {
+            font-size: 1.3em;
+            color: #d9534f; /* Color para el precio */
+        }
+
+        @media(max-width: 767px) {
+            .pricing-table {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .pricing-table div {
+                width: 90%; /* Se adapta en pantallas pequeñas */
+            }
+        }
+
+        /* Estilos para el formulario de pago */
+        .payment-form {
+            margin-top: 30px;
+        }
+
+        .payment-form h2 {
+            margin-bottom: 20px;
+        }
+    </style>
 </head>
 
 <body>
@@ -46,6 +102,9 @@
                     <a href="#services">Servicios</a>
                 </li>
                 <li>
+                    <a href="#prices" onclick="showPaymentForm()">Precios</a> <!-- Enlace a la sección de precios -->
+                </li>
+                <li>
                     <a href="#contact">Contacto</a>
                 </li>
             </ul>
@@ -57,7 +116,6 @@
 <a name="about"></a>
 <div class="intro-header">
     <div class="container">
-
         <div class="row">
             <div class="col-lg-12">
                 <div class="intro-message">
@@ -71,13 +129,14 @@
                         <li>
                             <a href="https://github.com/andreiiulianguta" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">GitHub</span></a>
                         </li>
+                        <li>
+                            <a href="https://es.linkedin.com/" class="btn btn-default btn-lg"><i class="fa fa-linkedin fa-fw"></i> <span class="network-name">Linkedin</span></a>
+                        </li>
                     </ul>
                 </div>
             </div>
         </div>
-
     </div>
-
 </div>
 
 <!-- Page Content -->
@@ -92,7 +151,7 @@
                 <p class="lead">Brindo servicios como mantenimiento y reparación de equipos, instalación de sistemas operativos, eliminación de virus, configuración de redes y soporte técnico.</p>
             </div>
             <div class="col-lg-5 col-lg-offset-2 col-sm-6">
-                <img class="img-responsive" src="img/servicio-tecnico.jpg" alt="Servicio Técnico">
+                <img class="img-responsive" src="img/ServicioTec.jpg" alt="Servicio Técnico">
             </div>
         </div>
     </div>
@@ -114,22 +173,114 @@
     </div>
 </div>
 
-<a name="contact"></a>
-<div class="banner">
+<!-- Sección de Precios -->
+<a name="prices"></a>
+<div class="content-section-a">
     <div class="container">
         <div class="row">
-            <div class="col-lg-6">
-                <h2>Conéctate con Andrei:</h2>
+            <div class="col-lg-12">
+                <hr class="section-heading-spacer">
+                <div class="clearfix"></div>
+                <h2 class="section-heading">Precios de Servicios</h2>
+                <div class="pricing-table">
+                    <div>
+                        <h4>Desarrollo de Software</h4>
+                        <p>Desarrollo y soporte de aplicaciones personalizadas.</p>
+                        <p>
+                            <strong>
+                                <a href="payment.html?service=Desarrollo%20de%20Software&price=95" target="_blank" style="text-decoration: none; color: #d9534f;">Precio: 95€/mes</a>
+                            </strong>
+                        </p>
+                    </div>
+                    <div>
+                        <h4>Mantenimiento de Equipos</h4>
+                        <p>Servicio mensual para mantenimiento de hardware y software.</p>
+                        <p>
+                            <strong>
+                                <a href="payment.html?service=Mantenimiento%20de%20Equipos&price=30" target="_blank" style="text-decoration: none; color: #d9534f;">Precio: 30€/mes</a>
+                            </strong>
+                        </p>
+                    </div>
+                    <div>
+                        <h4>Soporte Técnico</h4>
+                        <p>Asistencia técnica remota o en sitio.</p>
+                        <p>
+                            <strong>
+                                <a href="payment.html?service=Soporte%20Técnico&price=50" target="_blank" style="text-decoration: none; color: #d9534f;">Precio: 50€/mes</a>
+                            </strong>
+                        </p>
+                    </div>
+                </div>
             </div>
-            <div class="col-lg-6">
-                <ul class="list-inline banner-social-buttons">
-                    <li>
-                        <a href="https://www.instagram.com/tu_perfil" class="btn btn-default btn-lg"><i class="fa fa-instagram fa-fw"></i> <span class="network-name">Instagram</span></a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/tu_github" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">GitHub</span></a>
-                    </li>
-                </ul>
+        </div>
+    </div>
+</div>
+
+                <!-- Formulario de Pago -->
+                <div class="payment-form" id="paymentForm" style="display:none;">
+                    <h2>Formulario de Pago</h2>
+                    <form>
+                        <div class="form-group">
+                            <label for="serviceName">Servicio:</label>
+                            <input type="text" class="form-control" id="serviceName" readonly>
+                        </div>
+                        <div class="form-group">
+                            <label for="price">Precio:</label>
+                            <input type="text" class="form-control" id="price" readonly>
+                        </div>
+                        <div class="form-group">
+                            <label for="name">Nombre Completo:</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="cardNumber">Número de Tarjeta:</label>
+                            <input type="text" class="form-control" id="cardNumber" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="expiryDate">Fecha de Expiración (MM/AA):</label>
+                            <input type="text" class="form-control" id="expiryDate" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="cvv">CVV:</label>
+                            <input type="text" class="form-control" id="cvv" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Realizar Pago</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Sección de Contacto -->
+<a name="contact"></a>
+<div class="content-section-b">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <hr class="section-heading-spacer">
+                <div class="clearfix"></div>
+                <h2 class="section-heading">Contacto</h2>
+                <p class="lead">Puedes contactarme a través del siguiente formulario:</p>
+                <form>
+                    <div class="form-group">
+                        <label for="nameContact">Nombre:</label>
+                        <input type="text" class="form-control" id="nameContact" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="emailContact">Email:</label>
+                        <input type="email" class="form-control" id="emailContact" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mensaje:</label>
+                        <textarea class="form-control" id="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </form>
             </div>
         </div>
     </div>
@@ -139,25 +290,8 @@
 <footer>
     <div class="container">
         <div class="row">
-            <div class="col-lg-12">
-                <ul class="list-inline">
-                    <li>
-                        <a href="#">Home</a>
-                    </li>
-                    <li class="footer-menu-divider">&sdot;</li>
-                    <li>
-                        <a href="#about">About</a>
-                    </li>
-                    <li class="footer-menu-divider">&sdot;</li>
-                    <li>
-                        <a href="#services">Servicios</a>
-                    </li>
-                    <li class="footer-menu-divider">&sdot;</li>
-                    <li>
-                        <a href="#contact">Contacto</a>
-                    </li>
-                </ul>
-                <p class="copyright text-muted small">Copyright &copy; Andrei 2024. All Rights Reserved</p>
+            <div class="col-lg-12 text-center">
+                <p>Copyright &copy; Andrei DEV 2024</p>
             </div>
         </div>
     </div>
@@ -168,6 +302,14 @@
 
 <!-- Bootstrap Core JavaScript -->
 <script src="js/bootstrap.min.js"></script>
+
+<script>
+    function showPaymentForm(service, price) {
+        document.getElementById('serviceName').value = service;
+        document.getElementById('price').value = price + '€';
+        document.getElementById('paymentForm').style.display = 'block';
+    }
+</script>
 
 </body>
 
